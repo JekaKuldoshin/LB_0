@@ -1,7 +1,12 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
+#include<math.h>
+
+using namespace std;
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
-}
+	setlocale(LC_ALL, "Rus"); //Русификация
+	cout << "\"Привет мир!!\""; /*Коментарии делаються очень легко.*/
+} 
