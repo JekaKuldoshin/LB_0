@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7ac9d1ed-7c3a-4ebe-b8e9-c7b4633994d5}</ProjectGuid>
-    <RootNamespace>Project8</RootNamespace>
+    <ProjectGuid>{ba131684-769d-4f25-bf81-7991c21476f8}</ProjectGuid>
+    <RootNamespace>Pract</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,8 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Calculator.h\Calculator.h.cpp" />
-    <ClCompile Include="Project__8.cpp" />
+    <ClCompile Include="Pract.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,6 @@
 ﻿#include<iostream>
+#include<math.h>
+
 
 using namespace std;
 
@@ -8,25 +10,34 @@ int main()
 	cout << "Это программа создана для сравнивания чисел." << endl;
 	cout << "После набора числа, нажмите \"Enter\" " << endl<<endl;
 
-	int a, b,spare;
-	char big, small, big_rawno, small_small;
+	int x, y,result,Calculate;
+    char oper = '<';
 
-	cout << "Введите число a: " << endl;
-	cin >> a;
-	cout << "Введите число b: " << endl;
-	cin >> b;
-
-	spare = (a <= b);
-	cout << endl;
-	cout << "Формула для сравнивания: а < или = b" << endl;
-	
-	cout << "Если True - 1" << endl;
-	cout << "Если False - 0" << endl<<endl;
-
-	cout <<"Результат: "<< spare << endl;
-
-	
-
-
-
+    Calculate;
+    while (true)
+    {
+        cin >> x >> oper >> y;
+        result = Calculate(x, oper, y);
+        cout << "Result is: " << result << endl;
+    }
+    return 0;
 }
+
+#include "Calculator.h.cpp/"
+double Calculate(double x, char oper, double y)
+{
+    switch (oper)
+    {
+    case '<':
+        return x < y;
+    case '>':
+        return x > y;
+    case '<=':
+        return x <= y;
+    case '>=':
+        return x >= y;
+    default:
+        return 0.0;
+    }
+}
+
