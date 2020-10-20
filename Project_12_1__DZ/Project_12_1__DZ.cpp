@@ -10,8 +10,9 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Rus");
+	system("cls");
 
-	cout << "Калькулятор(a+b)(a-b)(a*b)(a/b)" << endl;
+	cout << "Калькулятор(a+b)(a-b)(a*b)(a/b)" << endl << endl;
 
 	int a, b, selection;
 
@@ -24,6 +25,7 @@ int main()
 	"3.Умножение" << endl<<
 	"4.Деление" << endl;
 	cin >> selection;
+	system("cls");
 
 	switch (selection)
 	{

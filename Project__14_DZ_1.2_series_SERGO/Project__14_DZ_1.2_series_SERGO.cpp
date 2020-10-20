@@ -9,7 +9,7 @@ int main()
 	int symbolCount;
 	char symbol;
 	int lineType;
-	int index = 0;
+	int index = 10;
 
 	cout << "Введите количество линий: " << endl;
 	cin >> symbolCount;
