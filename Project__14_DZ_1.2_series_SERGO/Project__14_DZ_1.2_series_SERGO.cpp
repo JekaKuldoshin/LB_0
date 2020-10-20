@@ -22,6 +22,13 @@ int main()
 			<< "2.Вертикальная " << endl;
 		cin >> lineType;
 
+		if (lineType != 1 && lineType != 2)
+		{
+			cout << "Такого значения в меню нет." << endl;
+		
+		}
+
+
 		while (index<symbolCount)
 		{
 			if (lineType == 1)
