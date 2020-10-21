@@ -7,34 +7,27 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Rus");
-	int a, b, result;
+	int sum = 0;
+	int rangeBegin, rangeEnd;
 
-	cout << "Программа которая считает сумму нечетных числе в диапозоне а и b." << endl<<endl<<endl;
-
-	cout << "Напишите диапозон чисел" << endl;
-	cin >> a >> b;
-
-	cout << "Пользователь ввел диапозон от "<<a<<" до "<<b << endl;
-
+	cout << "Введите начало диапазона: ";
+	cin >> rangeBegin;
 	
-
-
+	cout << "Введите конец диапазона: ";
+	cin >> rangeEnd;
 
 	do
 	{
-		if (a % 2 == 0)
+		if (rangeBegin % 2 != 0)
 		{
-			result = a + 1;
+			sum += rangeBegin;
 		}
+		    
 
-		else
-		{
-			result = a + 0;
-		}
+		rangeBegin++;
+	} while (rangeBegin < rangeEnd);
 
-		cout << "Результат суммы нечетных чисел: " << result << endl;
 
-		result++;
-	} while (a < b);
+	cout << "Сумма всех нечетных чисел в указанном диапозоне = " <<sum<< endl;
 
 }
