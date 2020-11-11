@@ -6,12 +6,18 @@ int main()
 {
 	setlocale(LC_ALL, "Rus");
 
-	int a=10;
+	int a = 0;
 
-	while (a < 20)
+
+		for (int i = -15; i <= 15; i++)
 	{
-		cout << "Переменная a= " <<a<< endl;
-		a++;
-
+			
+			if (i % 2 ==0 ) {
+				a += i;
+			}
+		
+	
+	
+		cout << "Переменная a= " << a << endl;
 	}
 }
