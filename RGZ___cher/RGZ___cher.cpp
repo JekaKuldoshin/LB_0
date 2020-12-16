@@ -1,112 +1,54 @@
-﻿//8. Поменять числа главной и боковой диагоналей местами[123567890] = > [321567098]
-
-#include <iostream>
-#include<math.h>
-#include<conio.h>
-#include<time.h>
-#include<iomanip>
-
-#define N 9
-#define ROWS 3
-#define COLS 3
-
-int arr3[N];
-
-using namespace std;
-
-void Transfer(int arr[N])
+﻿#include <stdio.h>
+#include <stdlib.h>
+#define SIZE 20
+// Функция быстрой сортировки
+void quickSort(int* numbers, int left, int right)
 {
-	
-	arr[N];
-
-	int arr2[N][N]{};
-	for (int i = 0; i < COLS; i++)     //Переводим в матрицу 
-		for (int j = 0; j < ROWS; j++)
-		{
-			arr2[i][j] = arr[ROWS * i + j];
-		}
-	cout << "----------------------------------" << endl;
-	cout << "Выводим матрицу:" << endl;
-
-	for (int i = 0; i < COLS; i++)
-	{
-		for (int j = 0; j < ROWS; j++)
-		{
-			cout << setw(4) << arr2[i][j];
-		}
-		cout << endl;
-	}
-
-///////////////////////////////////////////////
-	cout << "\nМодернизированный массив: " << endl;
-	int b;
-	for (int i = 0; i < COLS; i++)
-
-	{
-
-		for (int j = 0; j < ROWS; j++)
-			if (i == j)
-			{
-
-				b = arr2[i][j];               //Делаем обмен
-
-				arr2[i][j] = arr2[i][COLS - 1 - j];
-
-				arr2[i][COLS - 1 - j] = b;
-
-			}
-
-
-	}
-
-
-
-	for (int i = 0; i < COLS; i++) { //Выводим модернизированный массив
-		for (int j = 0; j < ROWS; j++) {
-			cout << setw(4) << arr2[i][j];
-		}
-		cout << endl;
-	}
-
-	/////////////////////////////////////////
-	
-	for (int i = 0; i < COLS; i++)     //Переводим в матрицу 
-		for (int j = 0; j < ROWS; j++)
-		{
-			arr3[ROWS * i + j] = arr2[i][j];
-		}
-
-
+    int pivot; // разрешающий элемент
+    int l_hold = left; //левая граница
+    int r_hold = right; // правая граница
+    pivot = numbers[left];
+    while (left < right) // пока границы не сомкнутся
+    {
+        while ((numbers[right] >= pivot) && (left < right))
+            right--; // сдвигаем правую границу пока элемент [right] больше [pivot]
+        if (left != right) // если границы не сомкнулись
+        {
+            numbers[left] = numbers[right]; // перемещаем элемент [right] на место разрешающего
+            left++; // сдвигаем левую границу вправо
+        }
+        while ((numbers[left] <= pivot) && (left < right))
+            left++; // сдвигаем левую границу пока элемент [left] меньше [pivot]
+        if (left != right) // если границы не сомкнулись
+        {
+            numbers[right] = numbers[left]; // перемещаем элемент [left] на место [right]
+            right--; // сдвигаем правую границу вправо
+        }
+    }
+    numbers[left] = pivot; // ставим разрешающий элемент на место
+    pivot = left;
+    left = l_hold;
+    right = r_hold;
+    if (left < pivot) // Рекурсивно вызываем сортировку для левой и правой части массива
+        quickSort(numbers, left, pivot - 1);
+    if (right > pivot)
+        quickSort(numbers, pivot + 1, right);
 }
-
 int main()
 {
-	setlocale(LC_ALL, "Ru");
-
-	int arr[N]{ 1,2,3,5,6,7,8,9,0 };
-	
-	cout << "Количество элементов одномерного массива ->  " << N << endl;
-	
-	cout << "Элементы массива -> ";
-
-
-	for (int i = 0; i < N; i++)
-	{
-		cout<< arr[i]<<" | ";
-	}
-	cout << endl;
-
-	Transfer(arr);
-
-	cout << "----------------------------------" << endl;
-
-	cout << "Одномерный массив -> ";
-	for (int i = 0; i < ROWS * COLS; i++)
-	{
-
-		cout << arr3[i] << " | ";
-	}
-	cout << endl;
-	_getch();
-		return 0;
+    int a[SIZE];
+    // Заполнение массива случайными числами
+    for (int i = 0; i < SIZE; i++)
+        a[i] = rand() % 201 - 100;
+    // Вывод элементов массива до сортировки
+    for (int i = 0; i < SIZE; i++)
+        printf("%4d ", a[i]);
+    printf("\n");
+    quickSort(a, 0, SIZE - 1); // вызов функции сортировки
+              // Вывод элементов массива после сортировки
+    for (int i = 0; i < SIZE; i++)
+        printf("%4d ", a[i]);
+    printf("\n");
+    getchar();
+    return 0;
 }

@@ -4,6 +4,7 @@
 #include <clocale>
 #include<conio.h>
 #include<iomanip>
+#include<algorithm>
 
 using namespace std;
 
@@ -30,7 +31,7 @@ public:
 	double elapsed() const
 	{
 		return std::chrono::duration_cast<second_t>(clock_t::now() - m_beg).count();
-	}
+	 }
 };
 
 
@@ -113,28 +114,7 @@ link:
 	cout << "\nНажмите клавишу Enter чтобы продолжить..." << endl;
 	_getch();
 	system("cls");
-	//}
-	//else
-	//{
-	//	{
-	//		if (size = 0)    //создал условия если вводим 0
-	//		{
-	//			cout << "Ошибка! Массив не может принимать значение нуля." << endl;
-	//			_getch();
-	//			system("cls");
-	//			goto link;
-	//		}
-	//		else //создал условия если мы введем число меньше нуля
-	//		{
-	//			cout << "Ошибка! Массив не может принимать значение меньше нуля." << endl;
-	//			_getch();
-	//			system("cls");
-	//			goto link;
-	//		}
-	//	}
-	//	return 0;
-	//}
-	////Прописал случаи с неправильным набором 
+	
 
 		/////////////////////////////////////////////////////////////////////////////
 	cout << "------------------------------|" << endl;
@@ -939,9 +919,10 @@ link1:
 
 		for (int i = 0; i < (size3 / 2); i++)
 		{
-			buffer = A3[i];
+			int buffer1;
+			buffer1 = A3[i];
 			A3[i] = A3[size3 - 1 - i];               //Обмен 
-			A2[size3 - 1 - i] = buffer;
+			A3[size3 - 1 - i] = buffer1;
 
 		}
 
@@ -980,8 +961,8 @@ link1:
 		for (int i = 0; i < (size4 / 2); i++)
 		{
 			buffer = A4[i];
-			A3[i] = A4[size4 - 1 - i];               //Обмен 
-			A2[size4 - 1 - i] = buffer;
+			A4[i] = A4[size4 - 1 - i];               //Обмен 
+			A4[size4 - 1 - i] = buffer;
 
 		}
 
