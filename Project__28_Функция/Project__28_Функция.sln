@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Функция__6_(Пере
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Функции__7_(Шаблоны функций)", "Функции__7_(Шаблоны функций)\Функции__7_(Шаблоны функций).vcxproj", "{F38D43A5-2774-481D-81D1-E140E9F1E4BE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TEST", "TEST\TEST.vcxproj", "{558571D3-FDD7-4010-A777-A8EDA67B3BD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{F38D43A5-2774-481D-81D1-E140E9F1E4BE}.Release|x64.Build.0 = Release|x64
 		{F38D43A5-2774-481D-81D1-E140E9F1E4BE}.Release|x86.ActiveCfg = Release|Win32
 		{F38D43A5-2774-481D-81D1-E140E9F1E4BE}.Release|x86.Build.0 = Release|Win32
+		{558571D3-FDD7-4010-A777-A8EDA67B3BD2}.Debug|x64.ActiveCfg = Debug|x64
+		{558571D3-FDD7-4010-A777-A8EDA67B3BD2}.Debug|x64.Build.0 = Debug|x64
+		{558571D3-FDD7-4010-A777-A8EDA67B3BD2}.Debug|x86.ActiveCfg = Debug|Win32
+		{558571D3-FDD7-4010-A777-A8EDA67B3BD2}.Debug|x86.Build.0 = Debug|Win32
+		{558571D3-FDD7-4010-A777-A8EDA67B3BD2}.Release|x64.ActiveCfg = Release|x64
+		{558571D3-FDD7-4010-A777-A8EDA67B3BD2}.Release|x64.Build.0 = Release|x64
+		{558571D3-FDD7-4010-A777-A8EDA67B3BD2}.Release|x86.ActiveCfg = Release|Win32
+		{558571D3-FDD7-4010-A777-A8EDA67B3BD2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
