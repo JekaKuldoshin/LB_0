@@ -1,31 +1,54 @@
-﻿/*
-До практики № 1 по рекурсії в мовах С/С++.
-Приклад 1:
-Написати функцію, яка зводить число х в ступінь y
-*/
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
-
-int fun(int x, int y)
-{
-	if (y == 1) return x;
-	return x * fun(x, y - 1);
-}
-
 int main()
 {
-	int x, y;
-	// Виклик рекурсивної функції
-	while (true)
-	{
-		cout << "Input x y:" << endl;
-		cin >> x >> y;
-		cout << endl;
-		cout << "x to the power of y = " << fun(x, y) << endl;
+	int x = 50, y = 30;
+	int* p1, * p2;
+	
 
-		system("pause");
-		system("cls");
-	}
 
-	return 0;
+	p1 = &x;
+	p2 = &y;
+	cout << "x=\t" << x << endl;		// x = 20;
+	cout << "y=\t" << y << endl;		// y = 20;
+	cout << "*p1=\t" << *p1 << endl;	// *p1 = 20;
+	cout << "*p2=\t" << *p2 << endl;	// *p2 = 20;
+	cout << "-----" << endl;
+	*p1 = x+2;
+	*p2 = y-2;
+	cout << "x=\t" << x << endl;		// x = 20;
+	cout << "y=\t" << y << endl;		// y = 20;
+	cout << "*p1=\t" << *p1 << endl;	// *p1 = 20;
+	cout << "*p2=\t" << *p2 << endl;	// *p2 = 20;
+	cout << "-----" << endl;
+	p2 = p1;
+	cout << "x=\t" << x << endl;		// x = 20;
+	cout << "y=\t" << y << endl;		// y = 20;
+	cout << "*p1=\t" << *p1 << endl;	// *p1 = 20;
+	cout << "*p2=\t" << *p2 << endl;	// *p2 = 20;
+	cout << "-----" << endl;
+	*p1 = x+5;
+	cout << "x=\t" << x << endl;		// x = 20;
+	cout << "y=\t" << y << endl;		// y = 20;
+	cout << "*p1=\t" << *p1 << endl;	// *p1 = 20;
+	cout << "*p2=\t" << *p2 << endl;	// *p2 = 20;
+	cout << "-----" << endl;
+	p2 = &y;
+	cout << "x=\t" << x << endl;		// x = 20;
+	cout << "y=\t" << y << endl;		// y = 20;
+	cout << "*p1=\t" << *p1 << endl;	// *p1 = 20;
+	cout << "*p2=\t" << *p2 << endl;	// *p2 = 20;
+	cout << "-----" << endl;
+	x = y;
+	cout << "x=\t" << x << endl;		// x = 20;
+	cout << "y=\t" << y << endl;		// y = 20;
+	cout << "*p1=\t" << *p1 << endl;	// *p1 = 20;
+	cout << "*p2=\t" << *p2 << endl;	// *p2 = 20;
+	cout << "-----" << endl;
+	*p2 = y - 10;
+	*p1 = x + 10;
+	cout << "x=\t" << x << endl;		// x = 20;
+	cout << "y=\t" << y << endl;		// y = 20;
+	cout << "*p1=\t" << *p1 << endl;	// *p1 = 20;
+	cout << "*p2=\t" << *p2 << endl;	// *p2 = 20;
 }
