@@ -409,3 +409,7 @@ healthchecksdb
 /LB_3_TEST/LB_3_TEST.vcxproj
 /Global_project/Global_project.vcxproj.filters
 /Global_project/Global_project.vcxproj
+/Test/TEST_KR/TEST_KR.vcxproj.filters
+/Test/TEST_KR/TEST_KR.vcxproj
+/Test/Test_LB_5/Test_LB_5.vcxproj.filters
+/Test/Test_LB_5/Test_LB_5.vcxproj
