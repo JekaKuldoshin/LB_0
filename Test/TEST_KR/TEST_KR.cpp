@@ -59,7 +59,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include <time.h>0
+#include <time.h>
 
 
 using namespace std;
