@@ -1,37 +1,39 @@
-﻿/*
-Приклад 2:
-Написати функцію, яка виводить всі числа від 1 до N
-*/
+﻿#define  _CRT_SECURE_NO_WARNINGS
 
+#include "windows.h"
 #include <iostream>
+#include <ctime>
+#include < stdio.h > 
+
 
 using namespace std;
 
-void fun(int N)
-{
-	if (N != 1)fun(N - 1);
-	
-}
+struct Tabl {
+	unsigned int sc;
+	char name[10];
+	unsigned int size;            /*диаметр*/
+	unsigned int mhz;             /*частота*/
+};
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	srand(time(NULL));
 
-	while (true)
+	struct Tabl t {};
+
+	int size_string = 50;
+
+	int size = 0, i = 0, j = 0;
+	char c;
+	int line = 0;
+
+	char** str = new char* [size];
+	for (int u = 0; u < size; u++)
 	{
-		int N;
-		cout << "Введите N:" << endl;
-		cin >> N;
-
-		fun(N);
-
-		cout << endl;
-
-		system("pause");
-		system("cls");
+		str[u] = new char[size_string];
 	}
-	return 0;
-
 
 
 
